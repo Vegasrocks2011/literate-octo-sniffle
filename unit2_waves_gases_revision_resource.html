@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 — Waves & Solids, Liquids and Gases | Pearson IGCSE Physics</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,sans-serif;background:#f0f4f8;color:#1a1a1a;font-size:15px;line-height:1.6}
+.app{max-width:960px;margin:0 auto;padding:1.5rem 1rem 3rem}
+
+.header{background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 50%,#2563eb 100%);border-radius:14px;padding:1.5rem 2rem;margin-bottom:22px;color:#fff;position:relative;overflow:hidden}
+.header::after{content:'';position:absolute;top:-30px;right:-30px;width:200px;height:200px;background:rgba(255,255,255,.05);border-radius:50%}
+.header h1{font-size:23px;font-weight:700;margin-bottom:5px}
+.header p{font-size:13px;opacity:.85;margin-bottom:8px}
+.header-tags{display:flex;gap:8px;flex-wrap:wrap}
+.htag{background:rgba(255,255,255,.18);border-radius:6px;padding:3px 11px;font-size:12px;font-weight:600}
+
+.nav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:22px}
+.nb{padding:8px 16px;font-size:13px;border:none;border-radius:8px;background:#fff;color:#374151;cursor:pointer;font-family:inherit;font-weight:500;box-shadow:0 1px 3px rgba(0,0,0,.1);transition:all .15s}
+.nb:hover{background:#f3f4f6}
+.nb.on{background:#1d4ed8;color:#fff;box-shadow:0 2px 8px rgba(29,78,216,.4)}
+
+.pg{display:none}.pg.on{display:block}
+
+/* ── TOPIC TABS ── */
+.ttabs{display:flex;gap:4px;margin-bottom:18px;background:#e5e7eb;border-radius:10px;padding:4px}
+.ttab{flex:1;padding:8px 12px;font-size:13px;font-weight:600;border:none;border-radius:7px;cursor:pointer;font-family:inherit;background:transparent;color:#6b7280;transition:all .15s;text-align:center}
+.ttab:hover{background:rgba(255,255,255,.6)}
+.ttab.on{background:#fff;color:#1d4ed8;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+
+.topic-pg{display:none}.topic-pg.on{display:block}
+
+/* ── CARDS ── */
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1rem 1.3rem;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.c-blue{border-left:4px solid #3b82f6}
+.c-teal{border-left:4px solid #0d9488}
+.c-purple{border-left:4px solid #8b5cf6}
+.c-amber{border-left:4px solid #f59e0b}
+.c-red{border-left:4px solid #ef4444}
+.c-green{border-left:4px solid #22c55e}
+.c-coral{border-left:4px solid #f97316}
+.c-indigo{border-left:4px solid #6366f1}
+.c-pink{border-left:4px solid #ec4899}
+.c-sky{border-left:4px solid #0ea5e9}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+
+.bdg{display:inline-block;padding:2px 10px;border-radius:6px;font-size:12px;font-weight:600;margin-bottom:7px}
+.b-blue{background:#dbeafe;color:#1e40af}.b-teal{background:#ccfbf1;color:#0f766e}
+.b-purple{background:#ede9fe;color:#6d28d9}.b-amber{background:#fef3c7;color:#92400e}
+.b-red{background:#fee2e2;color:#991b1b}.b-green{background:#dcfce7;color:#166534}
+.b-coral{background:#ffedd5;color:#9a3412}.b-sky{background:#e0f2fe;color:#075985}
+
+.fbox{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;font-size:16px;font-weight:700;text-align:center;margin:8px 0}
+
+.row{display:flex;align-items:flex-start;gap:10px;padding:6px 0;border-bottom:1px solid #f3f4f6}
+.row:last-child{border-bottom:none}
+.tm{font-weight:600;font-size:13px;min-width:155px;flex-shrink:0;color:#111}
+.df{font-size:13px;color:#4b5563;line-height:1.5}
+
+.st{font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;margin-top:18px}
+.divider{border:none;border-top:2px solid #f1f5f9;margin:22px 0}
+
+.topic-banner{border-radius:10px;padding:9px 16px;font-size:14px;font-weight:700;color:#fff;margin:20px 0 13px;display:flex;align-items:center;gap:10px}
+.tb-waves{background:linear-gradient(90deg,#1e40af,#3b82f6)}
+.tb-slg{background:linear-gradient(90deg,#0f766e,#14b8a6)}
+.tb-sub{background:linear-gradient(90deg,#6d28d9,#8b5cf6)}
+
+.warn{background:#fef2f2;border-left:4px solid #ef4444;border-radius:0 8px 8px 0;padding:9px 14px;font-size:13px;color:#991b1b;margin-top:9px;line-height:1.5}
+.info{background:#eff6ff;border-left:4px solid #3b82f6;border-radius:0 8px 8px 0;padding:9px 14px;font-size:13px;color:#1e40af;margin-top:9px;line-height:1.5}
+.success{background:#f0fdf4;border-left:4px solid #22c55e;border-radius:0 8px 8px 0;padding:9px 14px;font-size:13px;color:#166534;margin-top:9px;line-height:1.5}
+.amber-box{background:#fffbeb;border-left:4px solid #f59e0b;border-radius:0 8px 8px 0;padding:9px 14px;font-size:13px;color:#92400e;margin-top:9px;line-height:1.5}
+
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:8px 10px;font-weight:600;border-bottom:2px solid #e5e7eb;background:#f9fafb}
+td{padding:7px 10px;border-bottom:1px solid #f3f4f6;vertical-align:top}
+tr:last-child td{border-bottom:none}
+
+/* ── SA ── */
+.rag-section{margin-bottom:16px}
+.rag-header{font-size:14px;font-weight:700;padding:9px 15px;border-radius:8px 8px 0 0;color:#fff}
+.rag-body{background:#fff;border:1px solid #e5e7eb;border-top:none;border-radius:0 0 10px 10px;overflow:hidden}
+.rag-row{display:flex;align-items:center;justify-content:space-between;padding:10px 15px;border-bottom:1px solid #f3f4f6;flex-wrap:wrap;gap:8px}
+.rag-row:last-child{border-bottom:none}
+.rag-skill{font-size:13px;flex:1;min-width:200px;line-height:1.4;color:#374151}
+.rag-btns{display:flex;gap:5px;flex-shrink:0}
+.rb2{padding:5px 14px;font-size:12px;border:1.5px solid #d1d5db;border-radius:6px;background:#f9fafb;cursor:pointer;font-family:inherit;font-weight:700;transition:all .15s}
+.rg{background:#16a34a;color:#fff;border-color:#16a34a}
+.ra{background:#d97706;color:#fff;border-color:#d97706}
+.rr{background:#dc2626;color:#fff;border-color:#dc2626}
+
+/* ── EXAM QUESTIONS ── */
+.eq-wrap{margin-bottom:18px}
+.eq-box{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.eq-header{padding:10px 16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.eq-header-waves{background:linear-gradient(90deg,#1e3a8a,#1d4ed8)}
+.eq-header-slg{background:linear-gradient(90deg,#0f766e,#0d9488)}
+.eq-num{font-size:13px;font-weight:700;color:#fff}
+.eq-marks{background:rgba(255,255,255,.2);color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:12px}
+.eq-diff{font-size:11px;padding:3px 10px;border-radius:12px;font-weight:700}
+.diff-1{background:#dcfce7;color:#166534}
+.diff-2{background:#fef3c7;color:#92400e}
+.diff-3{background:#fee2e2;color:#991b1b}
+.diff-4{background:#ede9fe;color:#6d28d9}
+
+.eq-body{padding:1.1rem 1.3rem}
+.eq-context{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:#374151;line-height:1.65}
+.eq-context p{margin-bottom:6px}.eq-context p:last-child{margin-bottom:0}
+.eq-parts{list-style:none}
+.eq-parts li{padding:9px 0;border-bottom:1px solid #f3f4f6;font-size:13px;color:#374151;line-height:1.6}
+.eq-parts li:last-child{border-bottom:none}
+.part-label{font-weight:700;color:#1d4ed8;margin-right:6px}
+.part-label-slg{color:#0f766e}
+.marks{float:right;font-weight:700;color:#6b7280;font-size:12px;background:#f3f4f6;padding:1px 8px;border-radius:10px}
+
+.reveal-section{margin-top:12px;border-top:1px dashed #e5e7eb;padding-top:12px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.reveal-btn{display:flex;align-items:center;gap:6px;padding:7px 16px;font-size:13px;border:1.5px solid #1d4ed8;border-radius:8px;background:#eff6ff;color:#1d4ed8;cursor:pointer;font-family:inherit;font-weight:600;transition:all .15s}
+.reveal-btn-slg{border-color:#0d9488;background:#f0fdfa;color:#0f766e}
+.reveal-btn:hover{opacity:.85}
+.answer-box{display:none;margin-top:10px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:12px 14px}
+.answer-box.on{display:block}
+.answer-box h4{font-size:12px;font-weight:700;color:#166534;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.answer-box p{font-size:13px;color:#166534;line-height:1.7;margin-bottom:6px}
+.answer-box p:last-child{margin-bottom:0}
+.answer-box ul{margin-left:16px;font-size:13px;color:#166534;line-height:1.8}
+.mark-note{font-size:12px;color:#15803d;font-style:italic;margin-top:8px;padding-top:6px;border-top:1px dashed #86efac}
+
+/* ── MCQ ── */
+.qb{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.1rem 1.3rem;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.q-num{font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.qt{font-size:14px;color:#111;margin-bottom:12px;line-height:1.6;font-weight:500}
+.ob{display:block;width:100%;text-align:left;padding:9px 14px;margin-bottom:6px;font-size:13px;border:1.5px solid #e5e7eb;border-radius:8px;background:#f9fafb;color:#374151;cursor:pointer;font-family:inherit;transition:all .15s}
+.ob:hover:not(:disabled){background:#eff6ff;border-color:#bfdbfe}
+.ob:disabled{cursor:default}
+.oc{background:#f0fdf4;color:#166534;border-color:#86efac;font-weight:600}
+.ow{background:#fef2f2;color:#991b1b;border-color:#fca5a5}
+.orc{background:#f0fdf4;color:#166534;border-color:#86efac}
+.fb{font-size:13px;margin-top:9px;padding:9px 13px;border-radius:8px;line-height:1.5;display:none}
+.fb.on{display:block}
+.fbc{background:#f0fdf4;color:#166534;border-left:3px solid #22c55e}
+.fbw{background:#fef2f2;color:#991b1b;border-left:3px solid #ef4444}
+
+.ab{padding:10px 26px;font-size:14px;border:none;border-radius:8px;background:#1d4ed8;color:#fff;cursor:pointer;font-family:inherit;font-weight:600;box-shadow:0 2px 6px rgba(29,78,216,.3);transition:all .15s}
+.ab:hover{background:#1e3a8a}
+
+/* ── SUMMARY ── */
+.stat-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1rem;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.stat-label{font-size:12px;color:#9ca3af;margin-bottom:6px;font-weight:500}
+.stat-val{font-size:26px;font-weight:700}
+.tr2{display:flex;align-items:center;justify-content:space-between;padding:9px 0;border-bottom:1px solid #f3f4f6;flex-wrap:wrap;gap:6px}
+.tr2:last-child{border-bottom:none}
+.pill{padding:3px 12px;border-radius:20px;font-size:12px;font-weight:600}
+.pig{background:#dcfce7;color:#166534}.pia{background:#fef3c7;color:#92400e}.pir{background:#fee2e2;color:#991b1b}
+.prog-wrap{background:#e5e7eb;border-radius:4px;height:7px;margin:5px 0 8px}
+.prog-bar{height:7px;border-radius:4px;transition:width .6s ease}
+
+/* ── REFERENCE BOX ── */
+.ref-box{background:linear-gradient(135deg,#eff6ff,#faf5ff);border:1px solid #c7d2fe;border-radius:10px;padding:12px 16px;margin:12px 0}
+.ref-box h4{font-size:13px;font-weight:700;color:#3730a3;margin-bottom:8px}
+
+@media(max-width:620px){.g2,.g3{grid-template-columns:1fr}.rag-row,.eq-header{flex-direction:column;align-items:flex-start}.ttabs{flex-direction:column}}
+@media print{.nav,.ttabs,.ab,.reveal-btn,.rag-btns{display:none}}
+</style>
+</head>
+<body>
+<div class="app">
+
+<div class="header">
+  <h1>Unit 2 Revision Resource</h1>
+  <p>Pearson Edexcel International GCSE Physics · Waves &amp; Solids, Liquids and Gases · Past Paper Practice</p>
+  <div class="header-tags">
+    <span class="htag">📡 Waves</span>
+    <span class="htag">🌡 Solids, Liquids &amp; Gases</span>
+    <span class="htag">Pearson 4PH1 Past Papers</span>
+    <span class="htag">Knowledge Organiser + Exam Practice</span>
+  </div>
+</div>
+
+<div class="nav">
+  <button class="nb on" onclick="sp('ko')">📖 Knowledge Organiser</button>
+  <button class="nb" onclick="sp('sa')">✅ Self-Assessment</button>
+  <button class="nb" onclick="sp('mcq')">❓ Quick-Fire MCQ</button>
+  <button class="nb" onclick="sp('eq')">📝 Past Paper Questions</button>
+  <button class="nb" onclick="bs();sp('sm')">📊 My Summary</button>
+</div>
+
+<!-- ═══════════════════════════════ KNOWLEDGE ORGANISER ═════════════════ -->
+<div class="pg on" id="pg-ko">
+
+<div class="ttabs">
+  <button class="ttab on" onclick="showTopic('waves')">📡 Waves</button>
+  <button class="ttab" onclick="showTopic('slg')">🌡 Solids, Liquids &amp; Gases</button>
+</div>
+
+<!-- ────────── WAVES KO ────────── -->
+<div class="topic-pg on" id="tp-waves">
+
+<div class="topic-banner tb-waves">Topic: Waves</div>
+
+<div class="st">Wave properties — key definitions</div>
+<div class="card c-blue">
+  <span class="bdg b-blue">Wave quantities and units</span>
+  <div class="g2" style="margin-top:8px">
+    <div>
+      <div class="row"><span class="tm">Amplitude</span><span class="df">Maximum displacement from the rest position. Larger amplitude = more energy. Measured in metres (m).</span></div>
+      <div class="row"><span class="tm">Wavelength (λ)</span><span class="df">Distance from one point to the next identical point on the wave (e.g. crest to crest). Unit: metres (m).</span></div>
+      <div class="row"><span class="tm">Frequency (f)</span><span class="df">Number of complete waves per second. Unit: hertz (Hz). 1 Hz = 1 wave per second.</span></div>
+      <div class="row"><span class="tm">Period (T)</span><span class="df">Time for one complete wave. T = 1/f. Unit: seconds (s).</span></div>
+      <div class="row"><span class="tm">Wave speed (v)</span><span class="df">Speed at which the wave transfers energy. Unit: m/s.</span></div>
+    </div>
+    <div>
+      <div class="fbox">v = f × λ</div>
+      <div class="fbox-sm" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:6px;font-size:13px;font-weight:700;text-align:center;margin:5px 0">T = 1 ÷ f</div>
+      <div class="fbox-sm" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:6px;font-size:13px;font-weight:700;text-align:center;margin:5px 0">f = 1 ÷ T</div>
+      <div class="info">Speed of light / EM waves in air/vacuum: c = 3.0 × 10⁸ m/s<br>Speed of sound in air: ~340 m/s</div>
+    </div>
+  </div>
+</div>
+
+<div class="st">Transverse vs longitudinal waves</div>
+<div class="card c-purple">
+  <div class="g2">
+    <div>
+      <h3 style="margin-bottom:8px">Transverse waves</h3>
+      <div class="row"><span class="tm">Oscillation</span><span class="df">Perpendicular (at right angles) to the direction of energy transfer</span></div>
+      <div class="row"><span class="tm">Examples</span><span class="df">All electromagnetic waves (light, microwaves, X-rays, gamma, UV, IR, radio), water waves, waves on a string</span></div>
+      <div class="row"><span class="tm">Can travel through</span><span class="df">Vacuum (EM waves) and matter</span></div>
+    </div>
+    <div>
+      <h3 style="margin-bottom:8px">Longitudinal waves</h3>
+      <div class="row"><span class="tm">Oscillation</span><span class="df">Parallel to the direction of energy transfer. Has compressions and rarefactions.</span></div>
+      <div class="row"><span class="tm">Examples</span><span class="df">Sound waves, ultrasound, seismic P-waves</span></div>
+      <div class="row"><span class="tm">Cannot travel through</span><span class="df">A vacuum — requires a medium (particles to compress)</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="st">The electromagnetic spectrum</div>
+<div class="card" style="overflow-x:auto">
+  <div style="background:linear-gradient(90deg,#1e3a8a,#4f46e5,#7c3aed,#c026d3,linear-gradient,#dc2626);height:10px;border-radius:5px;margin-bottom:10px"></div>
+  <table>
+    <thead><tr><th>Type</th><th>Wavelength</th><th>Frequency</th><th>Uses</th><th>Hazards</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Radio waves</strong></td><td>&gt;0.1 m</td><td>Lowest</td><td>Radio/TV, MRI, radar</td><td>Largely safe</td></tr>
+      <tr><td><strong>Microwaves</strong></td><td>1mm–0.1m</td><td>↑</td><td>Cooking, satellite comms, mobile phones</td><td>Internal tissue heating</td></tr>
+      <tr><td><strong>Infrared (IR)</strong></td><td>700nm–1mm</td><td>↑</td><td>TV remotes, thermal imaging, optical fibres</td><td>Skin burns</td></tr>
+      <tr><td><strong>Visible light</strong></td><td>400–700nm</td><td>↑</td><td>Sight, photography, optical fibres</td><td>Eye damage (laser)</td></tr>
+      <tr><td><strong>Ultraviolet (UV)</strong></td><td>10–400nm</td><td>↑</td><td>Sterilisation, security marking, tanning</td><td>Skin cancer, eye damage</td></tr>
+      <tr><td><strong>X-rays</strong></td><td>0.01–10nm</td><td>↑</td><td>Bone imaging, CT scans, security scanning</td><td>Ionising — causes cancer</td></tr>
+      <tr><td><strong>Gamma rays (γ)</strong></td><td>&lt;0.01nm</td><td>Highest</td><td>Cancer treatment, sterilising equipment</td><td>Strongly ionising</td></tr>
+    </tbody>
+  </table>
+  <div class="info" style="margin-top:10px">All EM waves: travel at 3 × 10⁸ m/s in a vacuum · are transverse · transfer energy · can travel through a vacuum. Visible spectrum (ROYGBIV): Violet has shortest wavelength; Red has longest.</div>
+</div>
+
+<div class="st">Reflection</div>
+<div class="card c-teal">
+  <div class="g2">
+    <div>
+      <div class="fbox">Angle of incidence = Angle of reflection</div>
+      <div class="row" style="margin-top:6px"><span class="tm">Normal</span><span class="df">Perpendicular line to the surface at the point of incidence. All angles measured FROM the normal.</span></div>
+      <div class="row"><span class="tm">Regular reflection</span><span class="df">From smooth surfaces (mirrors, calm water). Parallel rays remain parallel → clear image.</span></div>
+      <div class="row"><span class="tm">Diffuse reflection</span><span class="df">From rough surfaces (paper, walls). Rays scattered in all directions. No clear image. Law of reflection still applies at each point.</span></div>
+    </div>
+    <div>
+      <h3 style="margin-bottom:8px">Plane mirror image properties</h3>
+      <ul style="font-size:13px;color:#4b5563;margin-left:16px;line-height:1.9">
+        <li>Virtual (no light passes through image position)</li>
+        <li>Same size as the object</li>
+        <li>Same distance behind mirror as object is in front</li>
+        <li>Upright (not inverted vertically)</li>
+        <li>Laterally inverted (left–right swapped)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="st">Refraction and Snell's Law</div>
+<div class="card c-coral">
+  <div class="g2">
+    <div>
+      <div class="row"><span class="tm">Refraction</span><span class="df">Change in direction of a wave as it crosses a boundary between two media, due to a change in speed.</span></div>
+      <div class="row"><span class="tm">Air → Glass (denser)</span><span class="df">Light slows down → bends TOWARD the normal</span></div>
+      <div class="row"><span class="tm">Glass → Air</span><span class="df">Light speeds up → bends AWAY from normal</span></div>
+      <div class="row"><span class="tm">Along the normal</span><span class="df">Hits boundary at 90° → no bending, but still changes speed</span></div>
+    </div>
+    <div>
+      <div class="fbox">n = sin i ÷ sin r</div>
+      <div class="fbox" style="font-size:14px;margin-top:6px">sin C = 1 ÷ n</div>
+      <div class="row" style="margin-top:4px"><span class="tm">n</span><span class="df">Refractive index (no units)</span></div>
+      <div class="row"><span class="tm">i</span><span class="df">Angle of incidence (in air)</span></div>
+      <div class="row"><span class="tm">r</span><span class="df">Angle of refraction (in medium)</span></div>
+      <div class="row"><span class="tm">C</span><span class="df">Critical angle</span></div>
+    </div>
+  </div>
+  <div class="warn" style="margin-top:10px">⚠ Always measure angles from the NORMAL, not from the surface. Use SINE of angles in Snell's Law — never just divide the angles directly.</div>
+</div>
+
+<div class="st">Total internal reflection (TIR)</div>
+<div class="card c-indigo">
+  <div class="g2">
+    <div>
+      <div class="row"><span class="tm">TIR conditions</span><span class="df">1) Light travelling from denser to less dense medium. 2) Angle of incidence &gt; critical angle. BOTH must be true.</span></div>
+      <div class="row"><span class="tm">At critical angle</span><span class="df">Refracted ray travels along the boundary (angle of refraction = 90°)</span></div>
+      <div class="row"><span class="tm">Above critical angle</span><span class="df">All light reflected back — no refracted ray exits. TIR occurs.</span></div>
+    </div>
+    <div>
+      <div class="row"><span class="tm">Optical fibres</span><span class="df">Light/IR pulses undergo TIR at glass-cladding boundary. Used for internet, phone data, endoscopes. Very high data transfer rate.</span></div>
+      <div class="row"><span class="tm">Prisms</span><span class="df">45° prisms in binoculars and periscopes use TIR to redirect light. Better than mirrors (100% reflection).</span></div>
+      <div class="row"><span class="tm">Diamonds</span><span class="df">Small critical angle (≈24°) → many TIR reflections → sparkle</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="st">Sound waves</div>
+<div class="card c-sky">
+  <div class="g2">
+    <div>
+      <div class="row"><span class="tm">Nature</span><span class="df">Longitudinal waves — compressions and rarefactions. Require a medium. Cannot travel through a vacuum.</span></div>
+      <div class="row"><span class="tm">Speed in air</span><span class="df">~340 m/s. Faster in liquids and solids (particles closer together → energy transferred more quickly).</span></div>
+      <div class="row"><span class="tm">Human hearing</span><span class="df">20 Hz to 20,000 Hz (20 kHz). Below 20 Hz = infrasound. Above 20 kHz = ultrasound.</span></div>
+      <div class="row"><span class="tm">Measuring with oscilloscope</span><span class="df">Connect microphone to oscilloscope. Period T = time for one complete wave (read from time axis). f = 1/T.</span></div>
+    </div>
+    <div>
+      <div class="row"><span class="tm">Echo method</span><span class="df">Sound reflects off a wall. Time for echo to return = 2d/v. Speed = 2 × distance ÷ time.</span></div>
+      <div class="row"><span class="tm">Doppler effect</span><span class="df">Source moving toward observer → observer detects higher frequency (waves compressed). Source moving away → lower frequency.</span></div>
+      <div class="row"><span class="tm">Frequency on string</span><span class="df">Shorter string → higher frequency. Greater tension → higher frequency.</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="ref-box">
+  <h4>🔑 Key equations — Waves</h4>
+  <div class="g3" style="gap:8px;margin-top:6px">
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">v = f × λ</div><p style="font-size:11px;color:#6b7280;margin-top:2px">wave speed</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">T = 1/f</div><p style="font-size:11px;color:#6b7280;margin-top:2px">period</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">n = sin i / sin r</div><p style="font-size:11px;color:#6b7280;margin-top:2px">Snell's Law</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">sin C = 1/n</div><p style="font-size:11px;color:#6b7280;margin-top:2px">critical angle</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">n = c/v</div><p style="font-size:11px;color:#6b7280;margin-top:2px">refractive index</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">v = 2d/t</div><p style="font-size:11px;color:#6b7280;margin-top:2px">echo method</p></div>
+  </div>
+</div>
+
+</div><!-- end tp-waves -->
+
+<!-- ────────── SOLIDS LIQUIDS GASES KO ────────── -->
+<div class="topic-pg" id="tp-slg">
+
+<div class="topic-banner tb-slg">Topic: Solids, Liquids and Gases</div>
+
+<div class="st">States of matter — particle model</div>
+<div class="card c-teal" style="overflow-x:auto">
+  <table>
+    <thead><tr><th>Property</th><th style="color:#085041">Solid</th><th style="color:#1e40af">Liquid</th><th style="color:#6d28d9">Gas</th></tr></thead>
+    <tbody>
+      <tr><td>Arrangement</td><td>Regular close-packed lattice</td><td>Irregular, close together</td><td>Random, widely spaced</td></tr>
+      <tr><td>Motion</td><td>Vibrate in fixed positions</td><td>Flow and slide past each other</td><td>Rapid, random, free movement</td></tr>
+      <tr><td>Forces</td><td>Very strong</td><td>Moderate</td><td>Negligible</td></tr>
+      <tr><td>Shape/volume</td><td>Fixed shape, fixed volume</td><td>Takes container shape, fixed volume</td><td>Fills entire container</td></tr>
+      <tr><td>Compressible?</td><td>No</td><td>No</td><td>Yes — large spaces between particles</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="st">Gas pressure — kinetic theory explanation</div>
+<div class="card c-blue">
+  <span class="bdg b-blue">How gas molecules create pressure</span>
+  <div class="g2" style="margin-top:8px">
+    <div>
+      <div class="row"><span class="tm">How pressure is caused</span><span class="df">Gas molecules move randomly and collide with container walls. Each collision exerts a force on the wall. Pressure = total force per unit area from millions of collisions per second.</span></div>
+      <div class="row"><span class="tm">Pressure acts equally in all directions</span><span class="df">Molecules move randomly in all directions → they collide with all surfaces equally → pressure is the same on all walls of the container.</span></div>
+      <div class="row"><span class="tm">P = F ÷ A</span><span class="df">Pressure (Pa) = Force (N) ÷ Area (m²). 1 Pa = 1 N/m².</span></div>
+    </div>
+    <div>
+      <div class="fbox">P = F ÷ A</div>
+      <div class="fbox" style="margin-top:6px;font-size:14px">P₁V₁ = P₂V₂</div>
+      <div class="fbox" style="margin-top:6px;font-size:14px">P₁/T₁ = P₂/T₂</div>
+      <div class="warn">Temperature in gas law calculations MUST be in Kelvin. T(K) = T(°C) + 273</div>
+    </div>
+  </div>
+</div>
+
+<div class="st">Boyle's Law — pressure and volume at constant temperature</div>
+<div class="card c-purple">
+  <span class="bdg b-purple">Boyle's Law: P₁V₁ = P₂V₂ (constant temperature)</span>
+  <div class="g2" style="margin-top:8px">
+    <div>
+      <div class="row"><span class="tm">Statement</span><span class="df">For a fixed mass of gas at constant temperature, pressure is inversely proportional to volume.</span></div>
+      <div class="row"><span class="tm">Particle explanation</span><span class="df">Smaller volume → same number of molecules in less space → molecules hit walls more frequently → higher pressure.</span></div>
+      <div class="row"><span class="tm">Assumption</span><span class="df">Temperature remains constant. Amount of gas (number of molecules) is fixed.</span></div>
+    </div>
+    <div>
+      <div class="row"><span class="tm">Volume doubles</span><span class="df">Pressure halves (inverse relationship)</span></div>
+      <div class="row"><span class="tm">Volume halves</span><span class="df">Pressure doubles</span></div>
+      <div class="row"><span class="tm">Graph</span><span class="df">P vs V: hyperbola. P vs 1/V: straight line through origin.</span></div>
+      <div class="success" style="margin-top:8px">Units: pressure must be in same units both sides (both Pa, or both kPa). Volume same units both sides.</div>
+    </div>
+  </div>
+</div>
+
+<div class="st">Pressure Law — pressure and temperature at constant volume</div>
+<div class="card c-coral">
+  <span class="bdg b-coral">Pressure Law: P₁/T₁ = P₂/T₂ (constant volume)</span>
+  <div class="g2" style="margin-top:8px">
+    <div>
+      <div class="row"><span class="tm">Statement</span><span class="df">For a fixed mass of gas at constant volume, pressure is directly proportional to absolute temperature (in Kelvin).</span></div>
+      <div class="row"><span class="tm">Particle explanation — heating</span><span class="df">Higher temperature → molecules move faster → collide with walls more frequently AND with greater force → pressure increases.</span></div>
+    </div>
+    <div>
+      <div class="row"><span class="tm">Particle explanation — cooling</span><span class="df">Lower temperature → molecules move more slowly → collide less frequently and with less force → pressure decreases.</span></div>
+      <div class="row"><span class="tm">Graph</span><span class="df">P vs T(K): straight line through origin. P vs T(°C): straight line that does NOT pass through origin.</span></div>
+    </div>
+  </div>
+  <div class="warn" style="margin-top:10px">⚠ ALWAYS convert °C to Kelvin (add 273) before substituting into P₁/T₁ = P₂/T₂. Using °C gives wrong answers. The graph of P vs T(°C) is linear but NOT proportional — it does not pass through the origin.</div>
+</div>
+
+<div class="st">Absolute zero and the Kelvin scale</div>
+<div class="card c-indigo">
+  <div class="g2">
+    <div>
+      <div class="row"><span class="tm">Absolute zero</span><span class="df">0 K = −273 °C. The theoretical minimum temperature. Particles have minimum kinetic energy. Gas pressure would theoretically be zero.</span></div>
+      <div class="row"><span class="tm">Finding absolute zero from a graph</span><span class="df">Plot P vs T(°C). Extrapolate the straight line back to where P = 0. This x-intercept gives absolute zero ≈ −273 °C.</span></div>
+      <div class="row"><span class="tm">Kelvin scale</span><span class="df">Starts at absolute zero. T(K) = T(°C) + 273. One kelvin = one degree Celsius in size. No negative values.</span></div>
+    </div>
+    <div>
+      <div class="row"><span class="tm">Linear vs proportional</span><span class="df">P vs T(°C): linear (straight line) but NOT proportional (does not pass through origin). P vs T(K): linear AND proportional (passes through origin at 0 K).</span></div>
+      <div class="row"><span class="tm">Open container heated</span><span class="df">Air expands and escapes through the opening → number of molecules inside decreases → pressure stays constant (atmospheric).</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="st">Combined gas law</div>
+<div class="card c-green">
+  <div class="fbox" style="font-size:18px">P₁V₁/T₁ = P₂V₂/T₂</div>
+  <p style="font-size:13px;color:#4b5563;margin-top:10px;line-height:1.6">Used when both pressure, volume and temperature all change. Temperature must always be in Kelvin. Good check: if volume is constant, V₁ = V₂ cancels to give P₁/T₁ = P₂/T₂. If temperature is constant, T₁ = T₂ cancels to give P₁V₁ = P₂V₂.</p>
+</div>
+
+<div class="ref-box">
+  <h4>🔑 Key equations — Solids, Liquids &amp; Gases</h4>
+  <div class="g3" style="gap:8px;margin-top:6px">
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">P = F ÷ A</div><p style="font-size:11px;color:#6b7280;margin-top:2px">pressure</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">P₁V₁ = P₂V₂</div><p style="font-size:11px;color:#6b7280;margin-top:2px">Boyle's Law</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">P₁/T₁ = P₂/T₂</div><p style="font-size:11px;color:#6b7280;margin-top:2px">Pressure Law</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">T(K) = T(°C)+273</div><p style="font-size:11px;color:#6b7280;margin-top:2px">Kelvin conversion</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">P₁V₁/T₁ = P₂V₂/T₂</div><p style="font-size:11px;color:#6b7280;margin-top:2px">Combined gas law</p></div>
+    <div style="text-align:center"><div class="fbox" style="font-size:14px">ρ = m ÷ V</div><p style="font-size:11px;color:#6b7280;margin-top:2px">density</p></div>
+  </div>
+</div>
+
+</div><!-- end tp-slg -->
+
+<div style="text-align:center;margin-top:24px"><button class="ab" onclick="sp('sa')">Go to Self-Assessment →</button></div>
+</div><!-- end KO -->
+
+<!-- ═══════════════════════════════ SELF ASSESSMENT ═════════════════════ -->
+<div class="pg" id="pg-sa">
+<h1 style="margin-bottom:4px">Self-Assessment</h1>
+<p style="font-size:13px;color:#6b7280;margin-bottom:20px">Rate your confidence: <strong style="color:#16a34a">G</strong> = Confident · <strong style="color:#d97706">A</strong> = Unsure · <strong style="color:#dc2626">R</strong> = Not yet. Feeds directly into your Summary.</p>
+<div id="sa-wrap"></div>
+<div style="text-align:center;margin-top:20px"><button class="ab" onclick="sp('mcq')">Quick-Fire MCQ →</button></div>
+</div>
+
+<!-- ═══════════════════════════════ MCQ ═════════════════════════════════ -->
+<div class="pg" id="pg-mcq">
+<h1 style="margin-bottom:4px">Quick-Fire MCQ</h1>
+<p style="font-size:13px;color:#6b7280;margin-bottom:20px">20 questions across both topics. Select your answer for instant feedback.</p>
+<div id="mcq-wrap"></div>
+<div style="text-align:center;margin-top:20px"><button class="ab" onclick="sp('eq')">Past Paper Questions →</button></div>
+</div>
+
+<!-- ═══════════════════════════════ EXAM QUESTIONS ═══════════════════════ -->
+<div class="pg" id="pg-eq">
+<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:10px">
+  <h1>Past Paper Questions</h1>
+  <div style="display:flex;gap:6px;flex-wrap:wrap;font-size:12px">
+    <span style="background:#dcfce7;color:#166534;padding:3px 10px;border-radius:10px;font-weight:600">● Foundation</span>
+    <span style="background:#fef3c7;color:#92400e;padding:3px 10px;border-radius:10px;font-weight:600">● Developing</span>
+    <span style="background:#fee2e2;color:#991b1b;padding:3px 10px;border-radius:10px;font-weight:600">● Higher</span>
+    <span style="background:#ede9fe;color:#6d28d9;padding:3px 10px;border-radius:10px;font-weight:600">● Extended</span>
+  </div>
+</div>
+<p style="font-size:13px;color:#6b7280;margin-bottom:20px">Real Pearson 4PH1 past paper questions · Click <strong>Reveal answer</strong> if stuck. Blue = Waves · Teal = Solids, Liquids &amp; Gases.</p>
+
+<div class="ttabs">
+  <button class="ttab on" onclick="showEQ('eq-waves')">📡 Waves Questions</button>
+  <button class="ttab" onclick="showEQ('eq-slg')">🌡 Gases Questions</button>
+</div>
+
+<div id="eq-waves-wrap" class="topic-pg on"></div>
+<div id="eq-slg-wrap" class="topic-pg"></div>
+
+<div style="text-align:center;margin-top:20px"><button class="ab" onclick="bs();sp('sm')">View My Summary →</button></div>
+</div>
+
+<!-- ═══════════════════════════════ SUMMARY ══════════════════════════════ -->
+<div class="pg" id="pg-sm">
+<h1 style="margin-bottom:4px">My Summary</h1>
+<p style="font-size:13px;color:#6b7280;margin-bottom:20px">Your personalised performance profile across Unit 2</p>
+<div id="sm-wrap"></div>
+</div>
+
+</div><!-- end app -->
+
+<script>
+/* ══════════ SELF-ASSESSMENT DATA ══════════ */
+var RAG=[
+  {id:'tw',label:'Waves — Wave Properties',color:'#1e40af',skills:[
+    {id:'wa1',tx:'I can define amplitude, wavelength, frequency, period and wave speed and state the correct units for each.'},
+    {id:'wa2',tx:'I can apply v = fλ and T = 1/f to solve numerical problems, converting units correctly (e.g. MHz → Hz, nm → m).'},
+    {id:'wa3',tx:'I can distinguish between transverse and longitudinal waves and give examples of each type.'},
+    {id:'wa4',tx:'I can list all 7 types of EM wave in order of increasing frequency/decreasing wavelength, and state uses and hazards.'}
+  ]},
+  {id:'tr',label:'Waves — Reflection & Refraction',color:'#6d28d9',skills:[
+    {id:'wb1',tx:'I can state the law of reflection (i = r) and draw a fully labelled reflection diagram measuring from the normal.'},
+    {id:'wb2',tx:'I can apply Snell\'s Law (n = sin i ÷ sin r) to calculate the refractive index from angle measurements.'},
+    {id:'wb3',tx:'I can state the two conditions for TIR and apply sin C = 1/n to calculate the critical angle.'},
+    {id:'wb4',tx:'I can explain how optical fibres use TIR and state their applications.'}
+  ]},
+  {id:'ts',label:'Waves — Sound',color:'#0f766e',skills:[
+    {id:'wc1',tx:'I can explain how an oscilloscope is used to measure the frequency and period of a sound wave.'},
+    {id:'wc2',tx:'I can calculate the speed of sound using the echo method (v = 2d/t) and evaluate this method.'},
+    {id:'wc3',tx:'I can explain the Doppler effect and why frequency appears to change when a source moves toward or away from an observer.'}
+  ]},
+  {id:'tg',label:'Gases — Kinetic Theory & Gas Pressure',color:'#0d9488',skills:[
+    {id:'ga1',tx:'I can describe particle arrangement, motion and forces in solids, liquids and gases and explain compressibility.'},
+    {id:'ga2',tx:'I can explain how gas molecules exert pressure on container walls using kinetic theory (collision frequency and force).'},
+    {id:'ga3',tx:'I can explain why pressure acts equally in all directions in a gas.'},
+    {id:'ga4',tx:'I can apply P = F ÷ A to calculate pressure, force or area.'}
+  ]},
+  {id:'tl',label:'Gases — Gas Laws',color:'#9f1239',skills:[
+    {id:'gb1',tx:'I can apply Boyle\'s Law (P₁V₁ = P₂V₂) at constant temperature, stating the assumption made.'},
+    {id:'gb2',tx:'I can apply the Pressure Law (P₁/T₁ = P₂/T₂) at constant volume, always converting temperature to Kelvin first.'},
+    {id:'gb3',tx:'I can explain using particle theory why pressure increases when temperature increases at constant volume.'},
+    {id:'gb4',tx:'I can determine absolute zero from a P–T(°C) graph by extrapolating to P = 0, and explain why the P–T(°C) graph is linear but not proportional.'}
+  ]}
+];
+
+/* ══════════ MCQ DATA ══════════ */
+var MCQ=[
+  {id:'m1',tp:'EM Spectrum',q:'Which of these EM waves has the highest frequency?',
+   os:['Radio waves','Infrared','Visible light','Gamma rays'],c:3,
+   ex:'Gamma rays have the shortest wavelength and highest frequency in the EM spectrum. Remember: Radio → Microwave → IR → Visible → UV → X-ray → Gamma (increasing frequency).'},
+  {id:'m2',tp:'Wave equation',q:'A microwave has a wavelength of 0.05 m. Its speed in air is 3.0 × 10⁸ m/s. What is its frequency?',
+   os:['1.5 × 10⁷ Hz','6.0 × 10⁹ Hz','6.0 × 10¹⁰ Hz','1.5 × 10⁹ Hz'],c:1,
+   ex:'f = v ÷ λ = (3.0 × 10⁸) ÷ 0.05 = 6.0 × 10⁹ Hz. Always check units — wavelength in metres, speed in m/s gives frequency in Hz.'},
+  {id:'m3',tp:'Transverse vs Longitudinal',q:'Which of these is a longitudinal wave?',
+   os:['Light','Sound','Water waves','Microwaves'],c:1,
+   ex:'Sound is a longitudinal wave — particles oscillate parallel to the direction of energy transfer, creating compressions and rarefactions. All EM waves (light, microwaves, etc.) are transverse.'},
+  {id:'m4',tp:'Law of Reflection',q:'A ray hits a mirror with an angle of 35° between the ray and the mirror surface. What is the angle of reflection?',
+   os:['35°','55°','70°','90°'],c:1,
+   ex:'Angle with the surface = 35°, so angle of incidence (from the normal) = 90° − 35° = 55°. By the law of reflection: angle of reflection = 55°. Always measure from the normal.'},
+  {id:'m5',tp:"Snell's Law",q:'A ray enters glass at 45°. The angle of refraction is 28°. What is the refractive index?',
+   os:['0.66','1.52','0.44','2.14'],c:1,
+   ex:'n = sin i ÷ sin r = sin 45° ÷ sin 28° = 0.707 ÷ 0.469 = 1.51 ≈ 1.52. Note: use SINE of the angles, not the angles themselves.'},
+  {id:'m6',tp:'TIR',q:'What are the TWO conditions needed for total internal reflection?',
+   os:['Light must be in air and angle must exceed 45°','Light must travel from denser to less dense medium AND angle of incidence must exceed the critical angle','Light must travel from less dense to denser medium AND speed must increase','The surface must be rough AND the angle must be 90°'],c:1,
+   ex:'Both conditions must be met: (1) light must be travelling from a denser medium to a less dense medium (e.g. glass → air). (2) The angle of incidence inside the denser medium must be greater than the critical angle.'},
+  {id:'m7',tp:'Critical angle',q:'A glass block has a refractive index of 1.5. Calculate the critical angle.',
+   os:['30°','41.8°','48.6°','56.4°'],c:1,
+   ex:'sin C = 1/n = 1/1.5 = 0.667. C = sin⁻¹(0.667) = 41.8°. Any ray hitting the glass-air boundary at more than 41.8° from the normal undergoes TIR.'},
+  {id:'m8',tp:'Sound waves',q:'A student claps near a wall 65 m away and hears an echo after 0.38 s. What is the speed of sound?',
+   os:['171 m/s','342 m/s','24.7 m/s','246 m/s'],c:1,
+   ex:'The sound travels to the wall and back: total distance = 2 × 65 = 130 m. v = d ÷ t = 130 ÷ 0.38 = 342 m/s.'},
+  {id:'m9',tp:'Oscilloscope',q:'An oscilloscope shows a wave with a time-base setting of 2 ms/division. One complete wave spans 4 divisions. What is the frequency?',
+   os:['2000 Hz','500 Hz','125 Hz','4000 Hz'],c:2,
+   ex:'Period T = 4 divisions × 2 ms = 8 ms = 0.008 s. f = 1/T = 1/0.008 = 125 Hz. Remember to convert ms to seconds.'},
+  {id:'m10',tp:'Doppler effect',q:'A boat moves toward an observer on the shore, creating waves. What does the observer measure compared to the frequency created by the boat?',
+   os:['A lower frequency — waves are stretched out','The same frequency — motion does not affect waves','A higher frequency — waves are compressed in front of the moving source','A higher wavelength — waves travel faster toward the observer'],c:2,
+   ex:'The Doppler effect: a source moving toward an observer compresses the waves in front of it → shorter wavelength → higher frequency detected by the observer. Source moving away → longer wavelength → lower frequency.'},
+  {id:'m11',tp:'Gas pressure — kinetic theory',q:'How do gas molecules exert pressure on the walls of a container?',
+   os:['By their weight pressing downward on the walls','By sticking to the walls of the container','By colliding with the walls and exerting a force — millions of collisions per second create pressure','By absorbing energy from the walls and pushing outward'],c:2,
+   ex:'Gas molecules move randomly and collide with container walls. Each collision exerts a tiny force. Pressure = total force per unit area from all these collisions. More frequent or harder collisions = higher pressure.'},
+  {id:'m12',tp:'Gas pressure — all directions',q:'Why does gas exert the same pressure on all walls of a container?',
+   os:['Gas molecules always move downward due to gravity','Gas molecules move in all random directions and collide with all surfaces equally','The container is perfectly symmetrical','Gas pressure only acts downward'],c:1,
+   ex:'Gas molecules move randomly in all directions with many different speeds. They collide with all surfaces of the container equally — so the pressure is the same in all directions throughout the gas.'},
+  {id:'m13',tp:"Boyle's Law",q:'A sealed gas has a pressure of 200 kPa and volume of 3.0 m³. The volume changes to 6.0 m³ at constant temperature. What is the new pressure?',
+   os:['400 kPa','100 kPa','200 kPa','600 kPa'],c:1,
+   ex:'P₁V₁ = P₂V₂ → P₂ = P₁V₁ ÷ V₂ = 200 × 3.0 ÷ 6.0 = 100 kPa. Volume doubled → pressure halved (inverse relationship at constant T).'},
+  {id:'m14',tp:'Kelvin conversion',q:'A gas is at 27 °C. What is this temperature in Kelvin?',
+   os:['27 K','246 K','300 K','327 K'],c:2,
+   ex:'T(K) = T(°C) + 273 = 27 + 273 = 300 K. Always convert to Kelvin before using P₁/T₁ = P₂/T₂.'},
+  {id:'m15',tp:'Pressure Law',q:'A gas at 300 K has a pressure of 100 kPa in a sealed, rigid container. The temperature rises to 450 K. What is the new pressure?',
+   os:['66.7 kPa','150 kPa','200 kPa','100 kPa'],c:1,
+   ex:'P₁/T₁ = P₂/T₂ → P₂ = P₁ × T₂/T₁ = 100 × 450/300 = 150 kPa. Temperature increased by 50% → pressure increased by 50%. Note: temperatures already in Kelvin here.'},
+  {id:'m16',tp:'Pressure Law — particle explanation',q:'Explain why gas pressure increases when temperature increases at constant volume.',
+   os:['The gas molecules get bigger so they hit the walls harder','The gas molecules move faster at higher temperature → collide with walls more frequently and with greater force → more pressure','There are more gas molecules at higher temperature','The container shrinks slightly at higher temperature'],c:1,
+   ex:'Higher temperature → molecules have more kinetic energy → move faster → (1) hit the walls more frequently AND (2) each collision has greater force. Both effects increase pressure at constant volume.'},
+  {id:'m17',tp:'Absolute zero',q:'A graph of pressure against temperature (in °C) for a gas is plotted. The straight line, when extrapolated, reaches P = 0 at −273 °C. What does this represent?',
+   os:['The melting point of the gas','Absolute zero — the theoretical minimum temperature where molecular motion ceases','The point where the gas liquefies','The critical pressure of the gas'],c:1,
+   ex:'Absolute zero (0 K = −273 °C) is the theoretical minimum temperature. At this temperature, gas molecules would have no kinetic energy and exert no pressure. It cannot actually be reached in practice.'},
+  {id:'m18',tp:'P vs T graph',q:'Why does a graph of pressure against temperature in °C produce a straight line that does NOT pass through the origin?',
+   os:['The experiment has systematic errors','Because Celsius uses an arbitrary zero (0 °C is NOT the true zero of thermal energy — that is −273 °C). Only a P vs T(K) graph passes through the origin.','The gas does not obey the pressure law','Pressure always starts at atmospheric pressure'],c:1,
+   ex:'The Celsius scale has an arbitrary zero (0 °C = freezing point of water). The true zero of thermal energy is absolute zero (0 K = −273 °C). A P vs T(°C) graph is linear (proportional relationship exists) but does not pass through the origin because 0 °C ≠ 0 K.'},
+  {id:'m19',tp:'Open container',q:'An open conical flask is heated. The pressure of air inside does not change. Why?',
+   os:['The flask is elastic and expands','Air molecules escape through the opening as it heats — the number of molecules inside decreases, keeping the pressure constant','The temperature has no effect on pressure when the flask is open','The air becomes lighter and floats out'],c:1,
+   ex:'In an open container, air can escape when heated. As temperature rises, molecules move faster and some escape through the opening. The reduced number of molecules keeps the pressure equal to atmospheric pressure. This is why an open container does not change pressure when heated.'},
+  {id:'m20',tp:'Gas pressure calculation',q:'A gas cylinder has an internal surface area of 0.8 m². The gas exerts a pressure of 5000 Pa. What is the total force on the cylinder walls?',
+   os:['6250 N','4000 N','5000 N','625 N'],c:1,
+   ex:'F = P × A = 5000 × 0.8 = 4000 N. From P = F ÷ A, rearrange to F = P × A. Pressure in Pa, area in m², force in N.'}
+];
+
+/* ══════════ EXAM QUESTIONS — WAVES ══════════ */
+var EQ_WAVES=[
+  {id:'w1',diff:1,dlabel:'Foundation',marks:4,src:'Q02 4PH1/1PR Jun 2024 & Q02 4SS0/1P Nov 2020',
+   topic:'EM Spectrum — naming and uses',
+   context:'An incomplete electromagnetic spectrum table has two missing sections, labelled A and B. A is between radio waves and infrared; B is between ultraviolet and gamma rays.',
+   parts:[
+     {label:'(a)(i)',text:'Name the part of the EM spectrum labelled A.',marks:1},
+     {label:'(a)(ii)',text:'Name the part of the EM spectrum labelled B.',marks:1},
+     {label:'(b)(i)',text:'Give ONE use of microwaves.',marks:1},
+     {label:'(b)(ii)',text:'Give ONE use of gamma rays.',marks:1}
+   ],
+   answer:'(a)(i) Microwaves ✓\n(a)(ii) X-rays ✓\n(b)(i) Any one of: cooking food / satellite communications / mobile phones / radar ✓\n(b)(ii) Any one of: treating cancer (radiotherapy) / sterilising surgical equipment / sterilising food / PET scanning ✓'},
+
+  {id:'w2',diff:1,dlabel:'Foundation',marks:5,src:'Q06 4PH1/1P Jun 2023',
+   topic:'EM Waves — properties and X-rays',
+   context:'An X-ray image of a person\'s knee is shown. X-rays are part of the electromagnetic spectrum.',
+   parts:[
+     {label:'(a)(i)',text:'All electromagnetic waves are transverse and transfer energy. State ONE other property all EM waves have in common.',marks:1},
+     {label:'(a)(ii)',text:'State a harmful effect of excessive exposure to X-rays.',marks:1},
+     {label:'(a)(iii)',text:'Describe the difference between transverse waves and longitudinal waves.',marks:3}
+   ],
+   answer:'(a)(i) Any one of: travel at the same speed in a vacuum (3×10⁸ m/s) ✓ / can travel through a vacuum ✓\n(a)(ii) Any one of: ionising radiation — can cause cancer / cell mutation / damage DNA ✓\n(a)(iii) In a transverse wave, the oscillations/vibrations are perpendicular (at right angles) to the direction of wave travel/energy transfer ✓. In a longitudinal wave, the oscillations are parallel to the direction of wave travel/energy transfer ✓. Longitudinal waves have compressions and rarefactions ✓.'},
+
+  {id:'w3',diff:1,dlabel:'Foundation',marks:5,src:'Q02 4PH1/1PR Jan 2022',
+   topic:'EM Spectrum — ionising radiation and wavelength calculation',
+   context:'X-rays and gamma rays are examples of ionising radiation.',
+   parts:[
+     {label:'(a)',text:'Which of these is another example of ionising radiation? A: Infrared  B: Microwave  C: Radio  D: Ultraviolet',marks:1},
+     {label:'(b)',text:'Give one use of X-rays and one use of gamma rays.',marks:2},
+     {label:'(c)(i)',text:'State the formula linking speed, frequency and wavelength of a wave.',marks:1},
+     {label:'(c)(ii)',text:'Calculate the wavelength of a gamma ray with a frequency of 2.8 × 10¹⁹ Hz. [speed of gamma ray = 3.0 × 10⁸ m/s]',marks:3}
+   ],
+   answer:'(a) D — Ultraviolet ✓\n(b) X-rays: medical bone imaging / airport security scanning / detecting cracks in metals ✓\nGamma: cancer treatment (radiotherapy) / sterilising equipment/food ✓\n(c)(i) wave speed = frequency × wavelength / v = f × λ ✓\n(c)(ii) λ = v ÷ f ✓\nλ = (3.0 × 10⁸) ÷ (2.8 × 10¹⁹) ✓\nλ = 1.07 × 10⁻¹¹ m ✓'},
+
+  {id:'w4',diff:2,dlabel:'Developing',marks:9,src:'Q09 4PH1/1P Jan 2023',
+   topic:'Wave properties — amplitude, wavelength, frequency calculation',
+   context:'A wave diagram is shown. The wave has amplitude 3.0 cm and wavelength 8.0 cm. Microwaves travel at 3.0 × 10⁸ m/s in air.',
+   parts:[
+     {label:'(a)(i)',text:'State the amplitude of the wave shown in the diagram (in cm).',marks:1},
+     {label:'(a)(ii)',text:'State the wavelength of the wave shown in the diagram (in cm).',marks:1},
+     {label:'(b)(i)',text:'Name the part of the electromagnetic spectrum that has a LOWER frequency than microwaves.',marks:1},
+     {label:'(b)(ii)',text:'A microwave has a wavelength of 2.7 cm. Calculate the frequency of this microwave. [wave speed = frequency × wavelength]',marks:3},
+     {label:'(c)(ii)',text:'A student investigates microwaves and concludes that the meter reading is inversely proportional to the distance. For inversely proportional: meter reading × distance = constant. The data gives products of: 48, 52, 45, 49, 51. Comment on whether the student\'s conclusion is correct.',marks:4}
+   ],
+   answer:'(a)(i) 3.0 cm ✓\n(a)(ii) 8.0 cm ✓\n(b)(i) Radio waves ✓\n(b)(ii) Convert: 2.7 cm = 0.027 m ✓\nf = v ÷ λ = (3.0 × 10⁸) ÷ 0.027 ✓\nf = 1.1 × 10¹⁰ Hz ✓\n(c)(ii) The products are approximately constant (range 45–52) ✓. This supports the conclusion that meter reading is inversely proportional to distance ✓. However, there is some variation in the products — the relationship is approximately inversely proportional but not exactly ✓. The student should take more readings or repeat measurements to be more confident ✓.'},
+
+  {id:'w5',diff:2,dlabel:'Developing',marks:9,src:'Q07 4PH1/1PR Jan 2023',
+   topic:'Refraction and total internal reflection',
+   context:'A diagram shows the path of a ray of light through a glass block. The block has a refractive index of 1.52. The ray hits point K at an angle of incidence of 47°, and then hits point L at the inner surface.',
+   parts:[
+     {label:'(a)(i)',text:'The angle of incidence at point K is 47°. State the formula linking refractive index, angle of incidence and angle of refraction.',marks:1},
+     {label:'(a)(ii)',text:'Use the formula to show that the angle of refraction is about 30° for the ray at point K. [refractive index = 1.52]',marks:3},
+     {label:'(b)(i)',text:'Calculate the critical angle of the block. [refractive index = 1.52]',marks:3},
+     {label:'(b)(ii)',text:'State what happens to the ray at point L, where the angle of incidence at L exceeds the critical angle.',marks:1}
+   ],
+   answer:'(a)(i) n = sin i ÷ sin r (refractive index = sin(angle of incidence) / sin(angle of refraction)) ✓\n(a)(ii) sin r = sin i ÷ n ✓\nsin r = sin 47° ÷ 1.52 = 0.731 ÷ 1.52 = 0.481 ✓\nr = sin⁻¹(0.481) = 28.7° ≈ 30° ✓\n(b)(i) sin C = 1/n ✓\nsin C = 1/1.52 = 0.658\nC = sin⁻¹(0.658) ✓\nC = 41.1° ✓\n(b)(ii) Total internal reflection occurs / all the light is reflected back into the glass ✓'},
+
+  {id:'w6',diff:2,dlabel:'Developing',marks:14,src:'Q07 4PH1/1P Jun 2019',
+   topic:'Refraction — definition, Snell\'s Law, critical angle, TIR',
+   context:'A diagram shows a ray of light from a torch incident on the surface of a pool of water. The angle of incidence is 44° and the angle of refraction is 33°.',
+   parts:[
+     {label:'(a)',text:'State what is meant by the term refraction.',marks:1},
+     {label:'(b)(i)',text:'Draw the path of the ray of light in the water (ray bends toward normal entering denser medium).',marks:2},
+     {label:'(b)(ii)',text:'State the formula linking refractive index, angle of incidence and angle of refraction.',marks:1},
+     {label:'(b)(iii)',text:'Show that the refractive index of water is about 1.3. [angle of incidence = 44°, angle of refraction = 33°]',marks:2},
+     {label:'(c)(i)',text:'Explain the meaning of the term critical angle.',marks:2},
+     {label:'(c)(ii)',text:'State the formula linking critical angle and refractive index.',marks:1},
+     {label:'(c)(iii)',text:'Calculate the critical angle of water. [refractive index of water = 1.3]',marks:3}
+   ],
+   answer:'(a) Refraction is the change in direction of a wave as it passes from one medium to another (due to a change in speed) ✓\n(b)(i) Ray bends toward normal on entering water; direction is closer to the normal than the incident ray ✓✓\n(b)(ii) n = sin i ÷ sin r ✓\n(b)(iii) n = sin 44° ÷ sin 33° = 0.695 ÷ 0.545 = 1.27 ≈ 1.3 ✓✓\n(c)(i) The critical angle is the angle of incidence (in the denser medium) at which the angle of refraction equals 90° ✓ — the refracted ray travels along the boundary ✓. Above this angle, total internal reflection occurs.\n(c)(ii) sin C = 1/n ✓\n(c)(iii) sin C = 1/1.3 = 0.769 ✓\nC = sin⁻¹(0.769) ✓\nC = 50.3° ✓'},
+
+  {id:'w7',diff:3,dlabel:'Higher',marks:11,src:'Q05 4PH1/2P Jan 2020',
+   topic:'Sound — oscilloscope, sonometer, frequency',
+   context:'A sonometer is used to investigate the frequency of waves on a string. When the string is plucked it vibrates to produce a sound wave.',
+   parts:[
+     {label:'(a)',text:'Describe how an oscilloscope should be used to measure the frequency of the sound wave from the sonometer.',marks:4},
+     {label:'(b)(i)',text:'Give a control variable for the student\'s investigation into how frequency varies with string length.',marks:1},
+     {label:'(b)(ii)',text:'The student\'s results for a string length of 60 cm give frequencies: 80 Hz, 82 Hz, 84 Hz. One reading is thought to be anomalous. Calculate the mean frequency for 60 cm.',marks:2},
+     {label:'(b)(vi)',text:'The student cannot hear the sound from the sonometer for some string lengths. Explain which string lengths produce sounds that humans cannot hear.',marks:2}
+   ],
+   answer:'(a) Connect a microphone to the oscilloscope ✓. Set an appropriate time-base on the oscilloscope ✓. Read the period T from the oscilloscope — T = (number of divisions for one complete wave) × (time-base setting) ✓. Calculate frequency: f = 1/T ✓.\n(b)(i) Any one of: tension in the string / type/material of string / thickness of string ✓\n(b)(ii) 84 Hz appears anomalous (furthest from others). Mean = (80 + 82) ÷ 2 = 81 Hz ✓✓ (Accept: identify 80 as anomalous, mean = (82+84)/2 = 83 Hz ✓✓)\n(b)(vi) Short string lengths produce very HIGH frequencies (above 20 kHz) ✓ — these are ultrasound frequencies that humans cannot hear ✓. (Humans can hear 20 Hz to 20 kHz only.)'},
+
+  {id:'w8',diff:3,dlabel:'Higher',marks:11,src:'Q08 4PH1/2P Nov 2024',
+   topic:'Sound — speed of sound, echo method, evaluation',
+   context:'A student investigates the speed of sound by making a loud sound in front of a large wall 65 m away. The sound reflects off the wall and back to the student. The student measures a time of 0.35 seconds for the sound to travel to the wall and back.',
+   parts:[
+     {label:'(a)',text:'Give an appropriate method for measuring the distance between the student and the wall.',marks:2},
+     {label:'(b)',text:'Calculate the speed of sound from the student\'s data. [distance to wall = 65 m, time = 0.35 s]',marks:3},
+     {label:'(c)',text:'Evaluate this method for determining an accurate value for the speed of sound.',marks:4},
+     {label:'(d)',text:'Explain ONE improvement to the student\'s method.',marks:2}
+   ],
+   answer:'(a) Use a tape measure or long measuring tape ✓. Lay it along the ground from the student to the wall and read the distance ✓. (Accept: trundle wheel; laser rangefinder; measure on a map)\n(b) Total distance = 2 × 65 = 130 m ✓\nspeed = distance ÷ time = 130 ÷ 0.35 ✓\nspeed = 371 m/s ✓\n(c) Limitations: Human reaction time in starting/stopping the stopwatch introduces error ✓. The time (0.35 s) is very short — reaction time (~0.2 s) is a significant percentage of the total time ✓. Wind direction/speed could affect results ✓. The wall may not produce a clear sharp echo ✓. Only one measurement — no repeats to check reliability ✓.\n(d) Stand further from the wall so the total time is longer and reaction time error is a smaller percentage ✓. OR use a data logger/electronic timer triggered by sound to eliminate human reaction time ✓.'},
+
+  {id:'w9',diff:3,dlabel:'Higher',marks:11,src:'Q08 4PH1/1P Nov 2020',
+   topic:'Refraction — atmospheric optical illusions, critical angle, wavelength change',
+   context:'A mirage is an optical illusion formed by total internal reflection of light at the boundary between cold air and hot air near the ground. The critical angle of the cold air at this boundary is 88.500°.',
+   parts:[
+     {label:'(a)(i)',text:'State the formula linking critical angle and refractive index.',marks:1},
+     {label:'(a)(ii)',text:'Calculate the refractive index of the cold air. Give your answer to 5 significant figures. [critical angle = 88.500°]',marks:3},
+     {label:'(b)(ii)',text:'Explain why a ray of light travelling straight down (when the Sun is directly overhead) does not change direction when it enters the atmosphere.',marks:2},
+     {label:'(b)(iii)',text:'Explain why the wavelength of light reduces when it enters the atmosphere from space.',marks:2},
+     {label:'(b)(iv)',text:'Suggest why the Sun appears not to be circular when it is close to the horizon at sunset.',marks:1}
+   ],
+   answer:'(a)(i) sin C = 1/n ✓\n(a)(ii) n = 1/sin C = 1/sin(88.500°) ✓\nn = 1/0.99990 ✓\nn = 1.0001 (to 5 s.f.) ✓\n(b)(ii) A ray travelling straight down hits the atmosphere along the normal (at 90° to the boundary) ✓. A ray along the normal does not refract — it passes straight through without changing direction ✓.\n(b)(iii) The speed of light decreases when it enters the atmosphere (denser medium) ✓. Since v = fλ and frequency does not change, wavelength must decrease ✓.\n(b)(iv) Light from the top and bottom of the Sun enters the atmosphere at different angles ✓, so different parts are refracted by different amounts, distorting the circular shape (bottom of Sun appears raised more than top) ✓.'},
+
+  {id:'w10',diff:4,dlabel:'Extended',marks:13,src:'Q06 4PH1/2PR Nov 2024',
+   topic:'Refraction — practical method and TIR in prisms',
+   context:'A student determines the refractive index of a rectangular block of transparent material (n = 1.2). Equipment: ray box, rectangular transparent block, protractor, pencil, paper, ruler.',
+   parts:[
+     {label:'(a)',text:'Describe a method to determine the refractive index of the material. You may draw a diagram to help your answer.',marks:5},
+     {label:'(b)(i)',text:'State the formula linking refractive index and critical angle.',marks:1},
+     {label:'(b)(ii)',text:'Calculate the critical angle for the material. [refractive index = 1.2]',marks:2},
+     {label:'(b)(iii)',text:'Describe what is meant by the term total internal reflection.',marks:2},
+     {label:'(c)(i)',text:'Use a protractor to determine the angle of incidence at side AB of the prism (the diagram shows the angle is 56°).',marks:1},
+     {label:'(c)(ii)',text:'Explain whether TIR occurs at the side AB of the prism. [critical angle from (b)(ii)]',marks:2}
+   ],
+   answer:'(a) Place the block on paper and draw around its outline ✓. Shine a ray from the ray box at the flat face of the block at a known angle of incidence ✓. Mark two points on the incident ray and two on the emergent ray ✓. Remove the block, join the points and draw the normal at the entry face ✓. Measure angle of incidence (i) and angle of refraction (r) with a protractor. Repeat for several different angles of incidence. Calculate n = sin i ÷ sin r for each, then find the mean ✓.\n(b)(i) sin C = 1/n ✓\n(b)(ii) sin C = 1/1.2 = 0.833 ✓\nC = sin⁻¹(0.833) = 56.4° ✓\n(b)(iii) TIR occurs when light travels from a denser to a less dense medium ✓ at an angle of incidence greater than the critical angle — all the light is reflected back into the denser medium, with no refracted ray ✓.\n(c)(i) 56° ✓\n(c)(ii) The critical angle is 56.4° and the angle of incidence is 56°. Since 56° < 56.4°, the angle of incidence does NOT exceed the critical angle ✓, so TIR does NOT occur ✓ — some light is refracted out.'}
+];
+
+/* ══════════ EXAM QUESTIONS — SOLIDS LIQUIDS GASES ══════════ */
+var EQ_SLG=[
+  {id:'g1',diff:1,dlabel:'Foundation',marks:9,src:'Q11 4PH1/1PR Jan 2020',
+   topic:'Boyle\'s Law — particle explanation and calculation',
+   context:'The diagram shows a model of the human breathing system. A rubber sheet is pulled downwards so the air inside the glass jar occupies a larger volume. The temperature of the air does not change.',
+   parts:[
+     {label:'(a)',text:'Explain, in terms of particles, why the pressure of the air inside the glass jar decreases when the volume increases.',marks:3},
+     {label:'(b)',text:'Before the rubber sheet is pulled down, the air inside the jar is at atmospheric pressure. The volume of gas increases from 110 cm³ to 140 cm³. Calculate the pressure inside the jar after the sheet is pulled down. [atmospheric pressure = 101 kPa]',marks:3},
+     {label:'(c)',text:'Balloons inside the jar are open to the atmosphere. Explain why the balloons start to expand when the rubber sheet is pulled down.',marks:3}
+   ],
+   answer:'(a) The volume increases but the number of molecules stays the same ✓. The molecules are more spread out / have further to travel before hitting the walls ✓. The molecules hit the walls less frequently ✓ — so the force per unit area (pressure) decreases.\n(b) P₁V₁ = P₂V₂ (temperature constant) ✓\n101 × 110 = P₂ × 140 ✓\nP₂ = (101 × 110) ÷ 140 = 11110 ÷ 140 = 79.4 kPa ✓ (= 79,357 Pa)\n(c) The pressure of the air inside the jar decreases (below atmospheric) ✓. The atmospheric pressure outside the balloons is now greater than the pressure inside the jar ✓. The net inward force on the balloon is now less / the pressure difference pushes the balloon outward ✓ → balloons expand.'},
+
+  {id:'g2',diff:1,dlabel:'Foundation',marks:9,src:'Q05 4SS0/1P Jun 2023',
+   topic:'Gas pressure — kinetic theory and P = F ÷ A',
+   context:'The photograph shows the Opportunity Mars rover. Several large balloons protected it during landing. The balloons were tested in a cold room so that the temperature of the gas matched conditions on Mars.',
+   parts:[
+     {label:'(a)',text:'Explain how the gas molecules inside a balloon exert a pressure on the inside surface of the balloon.',marks:3},
+     {label:'(b)(i)',text:'Explain why the pressure of the gas decreases if the temperature of the gas decreases.',marks:3},
+     {label:'(b)(ii)',text:'State the formula linking pressure, force and area.',marks:1},
+     {label:'(b)(iii)',text:'The pressure due to the gas inside the balloon is 1200 Pa and the balloon has an inside surface area of 11 m². Calculate the force on the inside surface of the balloon due to the gas.',marks:2}
+   ],
+   answer:'(a) Gas molecules move randomly in all directions ✓. They collide with the inside surface of the balloon ✓. Each collision exerts a force on the surface — millions of collisions per second give a constant outward force per unit area = pressure ✓.\n(b)(i) Lower temperature → molecules have less kinetic energy → move more slowly ✓. Molecules collide with the walls less frequently ✓ and with less force per collision ✓ → pressure decreases.\n(b)(ii) pressure = force ÷ area / P = F ÷ A ✓\n(b)(iii) F = P × A = 1200 × 11 ✓ = 13 200 N ✓'},
+
+  {id:'g3',diff:2,dlabel:'Developing',marks:9,src:'Q11 4PH1/1P Jan 2022',
+   topic:'Boyle\'s Law and Pressure Law combined',
+   context:'Scientific balloons are tested in a laboratory. In test 1, the pressure is 120 kPa and volume is 92 m³. In test 2, volume is kept constant at this size with a temperature of 290 K.',
+   parts:[
+     {label:'(a)(i)',text:'The pressure of the air inside the balloon is reduced to 64 kPa by reducing external air pressure. Calculate the new volume of the balloon. [initial pressure = 120 kPa, initial volume = 92 m³]',marks:2},
+     {label:'(a)(ii)',text:'Give an assumption that is made in this calculation.',marks:1},
+     {label:'(b)(i)',text:'Explain why the pressure of the air in the balloon decreases when the temperature of the air decreases. [constant volume]',marks:3},
+     {label:'(b)(ii)',text:'Calculate the temperature of the air when the pressure of the air in the balloon is 64 kPa. [initial pressure = 120 kPa, initial temperature = 290 K]',marks:3}
+   ],
+   answer:'(a)(i) P₁V₁ = P₂V₂ (constant temperature) ✓\n120 × 92 = 64 × V₂\nV₂ = (120 × 92) ÷ 64 = 11040 ÷ 64 = 172.5 m³ ✓\n(a)(ii) Temperature remains constant throughout ✓ (OR: the gas is an ideal gas / fixed mass of gas)\n(b)(i) Lower temperature → molecules have less kinetic energy and move more slowly ✓. They collide with the walls less frequently ✓ and with less force per collision ✓ → pressure decreases.\n(b)(ii) P₁/T₁ = P₂/T₂ (constant volume) ✓\n120/290 = 64/T₂\nT₂ = (64 × 290) ÷ 120 ✓\nT₂ = 18560 ÷ 120 = 154.7 K ≈ 155 K ✓'},
+
+  {id:'g4',diff:2,dlabel:'Developing',marks:7,src:'QU09 4PH1/1PR Jun 2022',
+   topic:'Gas pressure — open container, constant pressure, collapse',
+   context:'An empty metal container has a hole in the top. It is heated for a long time, then a lid seals the hole and the container cools. As it cools, the container collapses.',
+   parts:[
+     {label:'(a)',text:'Describe how the air molecules in the container exert a pressure on its inner walls.',marks:3},
+     {label:'(b)',text:'The container is heated for a long time. Explain what happens to the NUMBER of air molecules in the container.',marks:2},
+     {label:'(c)',text:'The sealed container is allowed to cool. Explain why the container collapses.',marks:2}
+   ],
+   answer:'(a) Air molecules move randomly ✓ and collide with the inner walls of the container ✓. Each collision exerts a force — the total force per unit area from millions of collisions per second = pressure ✓.\n(b) As the container heats, air molecules gain kinetic energy and move faster ✓. Some molecules gain enough energy to escape through the hole — the number of molecules inside DECREASES ✓. (Pressure stays equal to atmospheric pressure — the open hole allows escape.)\n(c) When cooled and sealed, the molecules inside have less kinetic energy and exert less pressure ✓. The atmospheric pressure outside is now greater than the pressure inside ✓ → the net inward force causes the container walls to collapse inward.'},
+
+  {id:'g5',diff:2,dlabel:'Developing',marks:11,src:'Q09 4PH1/1P Nov 2021',
+   topic:'Pressure law — graph analysis and absolute zero',
+   context:'A graph shows how the pressure of a gas varies with its temperature in °C. The graph is a straight line that, when extrapolated, meets the temperature axis at approximately −273 °C.',
+   parts:[
+     {label:'(a)(i)',text:'Describe how the graph shows that there is a minimum value of temperature, known as absolute zero.',marks:2},
+     {label:'(a)(ii)',text:'Give the value of absolute zero in °C.',marks:1},
+     {label:'(a)(iii)',text:'Sketch a graph to show how the pressure of a gas varies with its Kelvin temperature (P on y-axis, T in K on x-axis).',marks:2},
+     {label:'(b)(i)',text:'The propane gas is at 1.03 × 10⁶ Pa. The cylinder has an internal surface area of 1.13 m². Calculate the force exerted on the walls of the cylinder.',marks:3},
+     {label:'(b)(ii)',text:'Explain why the pressure exerted by the propane gas acts equally in all directions.',marks:2}
+   ],
+   answer:'(a)(i) The graph is a straight line — when extrapolated/extended to where the pressure equals zero (P = 0) ✓, the temperature at this point is the minimum possible temperature (absolute zero) ✓ — since pressure cannot be negative.\n(a)(ii) Absolute zero = −273 °C ✓\n(a)(iii) Graph: straight line through the origin ✓, with positive gradient ✓ (P ∝ T when T is in Kelvin). Both axes must start at 0.\n(b)(i) F = P × A ✓\nF = 1.03 × 10⁶ × 1.13 ✓\nF = 1.16 × 10⁶ N ✓\n(b)(ii) Gas molecules move randomly in all directions ✓ and collide with all surfaces of the container equally ✓ — so the force per unit area (pressure) is the same on all surfaces.'},
+
+  {id:'g6',diff:3,dlabel:'Higher',marks:13,src:'Q04 4PH1/1PR Jan 2021',
+   topic:'Pressure Law — calculation, graph analysis, absolute zero',
+   context:'Apparatus investigates how the pressure of a gas varies with temperature. The volume is kept constant throughout. Results are plotted as pressure vs temperature (°C). The pressure at 35°C is 112 kPa.',
+   parts:[
+     {label:'(a)',text:'State why it is important to keep the volume constant (a control variable) throughout the investigation.',marks:1},
+     {label:'(b)(i)',text:'Explain how the results show that there is a linear, but NOT proportional, relationship between pressure and temperature in °C.',marks:2},
+     {label:'(b)(ii)',text:'Use the graph to determine the value for absolute zero.',marks:2},
+     {label:'(b)(iii)',text:'Explain how the pressure of the gas changes as temperature increases. Include ideas about particles.',marks:3},
+     {label:'(c)(i)',text:'Calculate the pressure of the gas when its temperature is 340 °C. [pressure at 35 °C = 112 kPa, assume constant volume]',marks:4},
+     {label:'(c)(ii)',text:'State the other quantity that must be constant for the calculation to be valid.',marks:1}
+   ],
+   answer:'(a) To ensure that only temperature is changing — if volume also changed, the results would not show a valid relationship between pressure and temperature alone ✓.\n(b)(i) The graph is a straight line (linear) ✓. It does not pass through the origin (the graph has a positive intercept on the pressure axis, not zero when T = 0 °C), so it is NOT proportional ✓.\n(b)(ii) Extrapolate the straight line to where it crosses the temperature axis (P = 0) ✓. This occurs at approximately −273 °C ✓.\n(b)(iii) As temperature increases, molecules gain kinetic energy and move faster ✓. They collide with the walls more frequently ✓ and with greater force per collision ✓ → pressure increases.\n(c)(i) Convert temperatures to Kelvin: T₁ = 35 + 273 = 308 K; T₂ = 340 + 273 = 613 K ✓\nP₁/T₁ = P₂/T₂ ✓\nP₂ = P₁ × T₂/T₁ = 112 × 613/308 ✓\nP₂ = 222.8 kPa ≈ 223 kPa ✓\n(c)(ii) The mass of gas (number of molecules / amount of gas) must remain constant ✓'},
+
+  {id:'g7',diff:3,dlabel:'Higher',marks:10,src:'Q11 4PH1/1PR Jan 2022',
+   topic:'Boyle\'s Law calculation and Pressure Law — tyre pressure',
+   context:'A mechanic pumps air into a car tyre. Before pumping, the air volume is 0.0043 m³ at 100 kPa. In the tyre, the pressure is 270 kPa. The tyre pressure monitoring system warns if pressure falls below 250 kPa.',
+   parts:[
+     {label:'(a)',text:'Calculate the volume of this air inside the tyre, assuming temperature does not change. Give your answer in standard form. [initial volume = 0.0043 m³, initial pressure = 100 kPa, final pressure = 270 kPa]',marks:3},
+     {label:'(b)(i)',text:'Using ideas about particles, explain why air pressure inside a tyre is lower on a cold winter day than on a warm summer day.',marks:3},
+     {label:'(b)(ii)',text:'The air pressure is 270 kPa at 20°C. On a cold winter day, temperature is 2°C. Determine whether the tyre pressure warning light will show. [assume tyre volume does not change]',marks:4}
+   ],
+   answer:'(a) P₁V₁ = P₂V₂ ✓\n100 × 0.0043 = 270 × V₂\nV₂ = (100 × 0.0043) ÷ 270 ✓\nV₂ = 1.59 × 10⁻³ m³ ✓\n(b)(i) Lower temperature → molecules have less kinetic energy → move more slowly ✓. They collide with the tyre walls less frequently ✓ and with less force per collision ✓ → pressure is lower on a cold day.\n(b)(ii) Convert temperatures: T₁ = 20 + 273 = 293 K; T₂ = 2 + 273 = 275 K ✓\nP₁/T₁ = P₂/T₂ (constant volume) ✓\nP₂ = P₁ × T₂/T₁ = 270 × 275/293 ✓\nP₂ = 253.6 kPa ✓\nSince 253.6 kPa > 250 kPa, the pressure does NOT fall below 250 kPa → the warning light will NOT show ✓.'},
+
+  {id:'g8',diff:3,dlabel:'Higher',marks:8,src:'Q13 4PH1/1PR Nov 2020',
+   topic:'Open container — egg and flask Pressure Law explanation',
+   context:'A boiled egg is placed in the top of a conical flask containing hot air. The egg seals the flask so no air escapes. The flask is no longer being heated. A short time later, the egg moves down into the flask and then stops.',
+   parts:[
+     {label:'(a)(i)',text:'The air in the flask is heated to 85°C. Calculate the temperature of the air in kelvin.',marks:1},
+     {label:'(a)(ii)',text:'Describe how the motion of the molecules in the flask changes when the temperature of the air inside increases.',marks:2},
+     {label:'(a)(iii)',text:'The pressure of the air in the open flask does not change when the temperature of the air increases. State what happens to the NUMBER of air molecules in the flask.',marks:1},
+     {label:'(b)',text:'Explain why the egg moves down into the flask and then stops moving. Refer to ideas about pressure.',marks:4}
+   ],
+   answer:'(a)(i) T(K) = 85 + 273 = 358 K ✓\n(a)(ii) The molecules gain kinetic energy ✓ and move faster (average speed increases) ✓. They collide with the walls more frequently and with greater force.\n(a)(iii) The number of air molecules in the flask DECREASES ✓ (molecules escape through the opening as the air heats and expands — keeping internal pressure equal to atmospheric)\n(b) Once the egg seals the flask, the air inside cools (no longer heated) ✓. The molecules inside slow down and collide less frequently with the egg — the pressure inside decreases ✓. The atmospheric pressure outside the flask is now greater than the pressure inside ✓ → the net downward force pushes the egg down into the flask. The egg stops when the pressure inside has increased enough (as volume decreases, pressure increases by Boyle\'s Law) to equal atmospheric pressure again ✓.'},
+
+  {id:'g9',diff:4,dlabel:'Extended',marks:13,src:'Q11 4PH1/1P Jan 2023',
+   topic:'Kelvin conversion, graph analysis and multi-step gas law',
+   context:'A container cools gases to very low temperatures. The gas inside is at −251°C. The experiment also explores how the pressure of a gas varies with Celsius temperature.',
+   parts:[
+     {label:'(a)(i)',text:'Calculate the temperature of the gas in kelvin. [temperature = −251°C]',marks:1},
+     {label:'(a)(ii)',text:'Calculate the pressure of the gas at −251°C. [pressure at 17°C = 1.00 × 10⁵ Pa, assume constant volume]',marks:4},
+     {label:'(b)(i)',text:'A graph of pressure against temperature in °C is plotted. Explain how this graph shows a linear but NOT proportional relationship.',marks:2},
+     {label:'(b)(ii)',text:'Use the graph to estimate the value of absolute zero in °C.',marks:2},
+     {label:'(b)(iii)',text:'Explain why the P vs T(°C) graph does not show a proportional relationship but a P vs T(K) graph does.',marks:2}
+   ],
+   answer:'(a)(i) T(K) = −251 + 273 = 22 K ✓\n(a)(ii) T₁ = 17 + 273 = 290 K; T₂ = 22 K ✓\nP₁/T₁ = P₂/T₂ ✓\nP₂ = P₁ × T₂/T₁ = 1.00 × 10⁵ × 22/290 ✓\nP₂ = 7.59 × 10³ Pa ✓\n(b)(i) The graph is a straight line (linear) ✓. It does not pass through the origin (P ≠ 0 when T = 0 °C) — it is not proportional ✓.\n(b)(ii) Extrapolate the straight line to where pressure = 0 ✓. The temperature at this point ≈ −273 °C ✓.\n(b)(iii) The Celsius scale has 0°C at the freezing point of water, NOT at the true minimum temperature ✓. 0°C does not represent zero thermal energy. The Kelvin scale starts at absolute zero (0 K = −273 °C) — zero on the Kelvin scale IS zero thermal energy, so P ∝ T(K) and the graph passes through the origin ✓.'},
+
+  {id:'g10',diff:4,dlabel:'Extended',marks:6,src:'QU11 4PH1/1PR Jun 2024',
+   topic:'Boyle\'s Law — compression and pressure calculation',
+   context:'Diagram 1 shows some gas molecules in a sealed container. The width of the container is slowly decreased (Diagram 2), reducing the volume. The initial volume is 130 cm³ and initial pressure is 100 kPa. The final width is half the original width (all other dimensions unchanged, so volume is halved to 65 cm³). Assume temperature remains constant.',
+   parts:[
+     {label:'(a)',text:'Describe how the motion of the gas molecules causes equal pressure on all the walls of the container.',marks:2},
+     {label:'(b)',text:'Calculate the pressure of the gas after the width of the container is decreased from its original volume of 130 cm³ to 65 cm³. [initial pressure = 100 kPa, assume temperature constant]',marks:4}
+   ],
+   answer:'(a) Gas molecules move randomly in all directions ✓. They collide with all surfaces of the container with the same frequency (on average) since their motion is random — so force per unit area (pressure) is equal on all walls ✓.\n(b) P₁V₁ = P₂V₂ (constant temperature) ✓\nNew volume = 65 cm³ ✓ (width halved, so volume halved)\n100 × 130 = P₂ × 65 ✓\nP₂ = (100 × 130) ÷ 65 = 200 kPa ✓'}
+];
+
+/* ══════════ STATE ══════════ */
+var ragScores={}, mcqScores={};
+
+/* ══════════ NAVIGATION ══════════ */
+function sp(id){
+  document.querySelectorAll('.pg').forEach(function(p){p.classList.remove('on')});
+  document.querySelectorAll('.nb').forEach(function(b){b.classList.remove('on')});
+  document.getElementById('pg-'+id).classList.add('on');
+  var m={ko:0,sa:1,mcq:2,eq:3,sm:4};
+  document.querySelectorAll('.nb')[m[id]].classList.add('on');
+  window.scrollTo(0,0);
+}
+
+function showTopic(id){
+  document.querySelectorAll('.topic-pg').forEach(function(p){p.classList.remove('on')});
+  document.querySelectorAll('.ttab').forEach(function(b){b.classList.remove('on')});
+  document.getElementById('tp-'+id).classList.add('on');
+  event.target.classList.add('on');
+  window.scrollTo(0,120);
+}
+
+function showEQ(id){
+  ['eq-waves-wrap','eq-slg-wrap'].forEach(function(wid){
+    document.getElementById(wid).classList.remove('on');
+  });
+  document.querySelectorAll('.ttab').forEach(function(b){b.classList.remove('on')});
+  document.getElementById(id+'-wrap').classList.add('on');
+  event.target.classList.add('on');
+}
+
+/* ══════════ BUILD SA ══════════ */
+function buildSA(){
+  var c=document.getElementById('sa-wrap');c.innerHTML='';
+  RAG.forEach(function(sec){
+    var wrap=document.createElement('div');wrap.className='rag-section';
+    var head=document.createElement('div');head.className='rag-header';
+    head.style.background=sec.color;head.textContent=sec.label;
+    var body=document.createElement('div');body.className='rag-body';
+    sec.skills.forEach(function(sk){
+      var row=document.createElement('div');row.className='rag-row';
+      row.innerHTML='<span class="rag-skill">'+sk.tx+'</span>'
+        +'<div class="rag-btns">'
+        +'<button class="rb2" onclick="setRAG(\''+sk.id+'\',\'g\',this)">G</button>'
+        +'<button class="rb2" onclick="setRAG(\''+sk.id+'\',\'a\',this)">A</button>'
+        +'<button class="rb2" onclick="setRAG(\''+sk.id+'\',\'r\',this)">R</button>'
+        +'</div>';
+      body.appendChild(row);
+    });
+    wrap.appendChild(head);wrap.appendChild(body);c.appendChild(wrap);
+  });
+}
+
+function setRAG(id,v,btn){
+  ragScores[id]=v;
+  btn.parentElement.querySelectorAll('button').forEach(function(b){b.classList.remove('rg','ra','rr')});
+  btn.classList.add(v==='g'?'rg':v==='a'?'ra':'rr');
+}
+
+/* ══════════ BUILD MCQ ══════════ */
+function buildMCQ(){
+  var c=document.getElementById('mcq-wrap');c.innerHTML='';
+  MCQ.forEach(function(q,i){
+    var d=document.createElement('div');d.className='qb';
+    var h='<div class="q-num">'+q.tp+' · Q'+(i+1)+' of '+MCQ.length+'</div>'
+      +'<p class="qt">'+q.q+'</p>';
+    q.os.forEach(function(o,j){
+      h+='<button class="ob" onclick="chkMCQ(\''+q.id+'\','+j+','+q.c+',this,\'fb-'+q.id+'\')">'+String.fromCharCode(65+j)+') '+o+'</button>';
+    });
+    h+='<div class="fb" id="fb-'+q.id+'"></div>';
+    d.innerHTML=h;c.appendChild(d);
+  });
+}
+
+function chkMCQ(qid,ch,co,btn,fbid){
+  btn.parentElement.querySelectorAll('.ob').forEach(function(b){b.disabled=true});
+  var fb=document.getElementById(fbid);fb.classList.add('on');
+  var q=MCQ.filter(function(x){return x.id===qid})[0];
+  if(ch===co){btn.classList.add('oc');fb.className='fb on fbc';fb.innerHTML='<strong>✓ Correct!</strong> '+q.ex;mcqScores[qid]=true;}
+  else{btn.classList.add('ow');btn.parentElement.querySelectorAll('.ob')[co].classList.add('orc');fb.className='fb on fbw';fb.innerHTML='<strong>✗ Incorrect.</strong> '+q.ex;mcqScores[qid]=false;}
+}
+
+/* ══════════ BUILD EQ ══════════ */
+function buildEQ(questions, containerId, headerClass, btnClass, plClass){
+  var c=document.getElementById(containerId);c.innerHTML='';
+  var dm={1:'diff-1',2:'diff-2',3:'diff-3',4:'diff-4'};
+  questions.forEach(function(q,i){
+    var wrap=document.createElement('div');wrap.className='eq-wrap';
+    var ansHtml=q.answer.replace(/\n/g,'<br>');
+    var plist='';
+    q.parts.forEach(function(p){
+      plist+='<li><span class="part-label '+plClass+'">'+p.label+'</span>'+p.text+'<span class="marks">['+p.marks+' mark'+(p.marks>1?'s':'')+']</span></li>';
+    });
+    var ctxHtml=q.context?'<div class="eq-context"><p>'+q.context.replace(/\n/g,'</p><p>')+'</p></div>':'';
+    wrap.innerHTML='<div class="eq-box">'
+      +'<div class="eq-header '+headerClass+'">'
+      +'<div><span class="eq-num">Q'+(i+1)+' — '+q.topic+'</span><br><span style="font-size:11px;color:rgba(255,255,255,.7)">'+q.src+'</span></div>'
+      +'<div style="display:flex;gap:6px;align-items:center"><span class="eq-diff '+dm[q.diff]+'">'+q.dlabel+'</span><span class="eq-marks">'+q.marks+' marks</span></div>'
+      +'</div>'
+      +'<div class="eq-body">'
+      +ctxHtml
+      +'<ul class="eq-parts">'+plist+'</ul>'
+      +'<div class="reveal-section">'
+      +'<button class="reveal-btn '+btnClass+'" onclick="toggleAnswer(\'ans-'+q.id+'\',this)">'
+      +'<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'
+      +'Reveal answer</button>'
+      +'<div class="answer-box" id="ans-'+q.id+'">'
+      +'<h4>✓ Mark scheme answer</h4>'
+      +'<p>'+ansHtml+'</p>'
+      +'<div class="mark-note">Each ✓ = 1 mark. Focus on key words and clear scientific reasoning.</div>'
+      +'</div></div></div></div>';
+    c.appendChild(wrap);
+  });
+}
+
+function toggleAnswer(id,btn){
+  var box=document.getElementById(id);
+  if(box.classList.contains('on')){
+    box.classList.remove('on');
+    btn.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Reveal answer';
+  } else {
+    box.classList.add('on');
+    btn.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>Hide answer';
+  }
+}
+
+/* ══════════ SUMMARY ══════════ */
+function bs(){
+  var allRAG=Object.values(ragScores);
+  var totG=allRAG.filter(function(v){return v==='g'}).length;
+  var totA=allRAG.filter(function(v){return v==='a'}).length;
+  var totR=allRAG.filter(function(v){return v==='r'}).length;
+  var totSkills=0;RAG.forEach(function(s){totSkills+=s.skills.length});
+  var mcqR=Object.values(mcqScores).filter(function(v){return v}).length;
+  var mcqT=MCQ.length;
+  var pct=mcqT>0?Math.round(mcqR/mcqT*100):0;
+  var col=pct>=70?'#166534':pct>=50?'#92400e':'#991b1b';
+  var bg=pct>=70?'#f0fdf4':pct>=50?'#fffbeb':'#fef2f2';
+  var lbl=pct>=70?'Strong — practise the higher-tariff past paper questions.':pct>=50?'Good progress — revisit amber/red skills.':'Focus revision on red areas first.';
+
+  var topicMap=[
+    {lb:'Waves — Wave properties & EM spectrum',skills:['wa1','wa2','wa3','wa4'],mcq:['m1','m2','m3']},
+    {lb:'Waves — Reflection & refraction',skills:['wb1','wb2','wb3','wb4'],mcq:['m4','m5','m6','m7']},
+    {lb:'Waves — Sound & oscilloscope',skills:['wc1','wc2','wc3'],mcq:['m8','m9','m10']},
+    {lb:'Gases — Kinetic theory & pressure',skills:['ga1','ga2','ga3','ga4'],mcq:['m11','m12','m19','m20']},
+    {lb:'Gases — Gas laws (Boyle\'s & Pressure Law)',skills:['gb1','gb2','gb3','gb4'],mcq:['m13','m14','m15','m16','m17','m18']}
+  ];
+
+  var rows='';var strong=[];var weak=[];var dev=[];
+  topicMap.forEach(function(t){
+    var sv=t.skills.map(function(id){return ragScores[id]}).filter(Boolean);
+    var mv=t.mcq.map(function(id){return mcqScores[id]}).filter(function(v){return v!==undefined});
+    var ragG=sv.filter(function(v){return v==='g'}).length;
+    var ragA=sv.filter(function(v){return v==='a'}).length;
+    var ragR=sv.filter(function(v){return v==='r'}).length;
+    var qp=mv.length?mv.filter(function(v){return v}).length/mv.length:null;
+    var st,pc;
+    if(qp!==null){if(qp>=0.75){st='Strong';pc='pig';}else if(qp>=0.5){st='Developing';pc='pia';}else{st='Needs work';pc='pir';}}
+    else if(ragG===t.skills.length&&t.skills.length>0){st='Self-confident';pc='pig';}
+    else if(ragR>0){st='Needs work';pc='pir';}
+    else if(ragA>0){st='Developing';pc='pia';}
+    else{st='Not assessed';pc='pia';}
+    var rs=sv.length?' <span style="font-size:11px;color:#9ca3af">('+ragG+'G/'+ragA+'A/'+ragR+'R)</span>':'';
+    rows+='<div class="tr2"><span style="font-size:14px;font-weight:500">'+t.lb+rs+'</span><span class="pill '+pc+'">'+st+'</span></div>';
+    if(st==='Strong'||st==='Self-confident')strong.push(t.lb);
+    else if(st==='Developing')dev.push(t.lb);
+    if(st==='Needs work')weak.push(t.lb);
+  });
+
+  var html='<div class="g3" style="margin-bottom:16px">'
+    +'<div class="stat-card"><div class="stat-label">MCQ Score</div><div class="stat-val">'+mcqR+'/'+mcqT+'</div></div>'
+    +'<div class="stat-card"><div class="stat-label">MCQ %</div><div class="stat-val" style="color:'+col+'">'+pct+'%</div></div>'
+    +'<div class="stat-card" style="background:'+bg+'"><div class="stat-label">Verdict</div><div style="font-size:12px;font-weight:700;color:'+col+';margin-top:6px;line-height:1.4">'+lbl+'</div></div>'
+    +'</div>'
+    +'<div class="g3" style="margin-bottom:16px">'
+    +'<div class="stat-card"><div class="stat-label">Skills rated</div><div class="stat-val">'+allRAG.length+'/'+totSkills+'</div>'
+    +'<div class="prog-wrap"><div class="prog-bar" style="width:'+Math.round(allRAG.length/totSkills*100||0)+'%;background:#1d4ed8"></div></div></div>'
+    +'<div class="stat-card"><div class="stat-label">Confident (G)</div><div class="stat-val" style="color:#16a34a">'+totG+'</div>'
+    +'<div class="prog-wrap"><div class="prog-bar" style="width:'+Math.round(totG/totSkills*100||0)+'%;background:#22c55e"></div></div></div>'
+    +'<div class="stat-card"><div class="stat-label">Amber + Red</div><div class="stat-val" style="color:#dc2626">'+(totA+totR)+'</div>'
+    +'<div class="prog-wrap"><div class="prog-bar" style="width:'+Math.round((totA+totR)/totSkills*100||0)+'%;background:#ef4444"></div></div></div>'
+    +'</div>'
+    +'<div class="st" style="font-size:11px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px">Topic-by-topic breakdown</div>'
+    +'<div class="card">'+rows+'</div>';
+
+  if(strong.length){html+='<div class="card c-green" style="margin-top:12px"><h3 style="color:#166534;margin-bottom:8px">✓ Topics you know well</h3><p style="font-size:13px;color:#374151;line-height:1.7">'+strong.join('<br>')+'</p></div>';}
+  if(dev.length){html+='<div class="card c-amber" style="margin-top:12px"><h3 style="color:#92400e;margin-bottom:8px">~ Topics to consolidate</h3><p style="font-size:13px;color:#374151;line-height:1.7">'+dev.join('<br>')+'</p></div>';}
+  if(weak.length){html+='<div class="card c-red" style="margin-top:12px"><h3 style="color:#991b1b;margin-bottom:8px">✗ Priority topics to revise</h3><p style="font-size:13px;color:#374151;line-height:1.7">'+weak.join('<br>')+'</p><p style="font-size:13px;color:#6b7280;margin-top:8px">Re-read the KO → write key facts from memory → retry those MCQ questions → work through the relevant past paper questions.</p></div>';}
+
+  html+='<div class="card" style="margin-top:14px;background:linear-gradient(135deg,#eff6ff,#f0fdf4);border:1px solid #bfdbfe">'
+    +'<h3 style="color:#1d4ed8;margin-bottom:10px">📋 Key exam tips — Unit 2</h3>'
+    +'<div class="g2" style="gap:16px">'
+    +'<div><p style="font-size:13px;font-weight:700;color:#1e40af;margin-bottom:6px">Waves</p>'
+    +'<div style="font-size:13px;color:#374151;line-height:1.85">'
+    +'<p>• v = fλ — convert units first (MHz → Hz, nm → m)</p>'
+    +'<p>• Angles always from the NORMAL, not the surface</p>'
+    +'<p>• Snell\'s Law: use SINE of angles, never just divide angles</p>'
+    +'<p>• TIR needs BOTH conditions: denser→less dense AND angle &gt; critical angle</p>'
+    +'<p>• Oscilloscope: T = divisions × time-base. f = 1/T</p>'
+    +'<p>• Echo: v = 2d ÷ t (total distance = 2 × one-way distance)</p>'
+    +'<p>• EM spectrum order: Radio-Micro-IR-Visible-UV-X-Gamma (↑ frequency)</p>'
+    +'</div></div>'
+    +'<div><p style="font-size:13px;font-weight:700;color:#0f766e;margin-bottom:6px">Solids, Liquids &amp; Gases</p>'
+    +'<div style="font-size:13px;color:#374151;line-height:1.85">'
+    +'<p>• ALWAYS convert °C to Kelvin (+ 273) before gas law calculations</p>'
+    +'<p>• Particle explanation: mention collision frequency AND force</p>'
+    +'<p>• Pressure acts equally in all directions — molecules move randomly</p>'
+    +'<p>• P–T(°C) graph: linear but NOT proportional (does not pass through origin)</p>'
+    +'<p>• P–T(K) graph: passes through origin (proportional relationship)</p>'
+    +'<p>• Absolute zero: extrapolate P–T(°C) graph to P = 0 → gives −273°C</p>'
+    +'<p>• Open container: air escapes when heated → number of molecules decreases → pressure stays constant</p>'
+    +'</div></div></div></div>';
+
+  if(!allRAG.length&&!Object.keys(mcqScores).length){html='<div class="card c-amber"><p style="font-size:13px;color:#92400e">Complete the Self-Assessment and Quick-Fire MCQ first to see your full personalised breakdown.</p></div>';}
+  html+='<div style="text-align:center;margin-top:24px"><button class="ab" onclick="sp(\'ko\')">Back to Knowledge Organiser →</button></div>';
+  document.getElementById('sm-wrap').innerHTML=html;
+}
+
+/* ══════════ INIT ══════════ */
+buildSA();
+buildMCQ();
+buildEQ(EQ_WAVES,'eq-waves-wrap','eq-header-waves','','part-label-waves');
+buildEQ(EQ_SLG,'eq-slg-wrap','eq-header-slg','reveal-btn-slg','part-label-slg');
+</script>
+</body>
+</html>
